@@ -116,3 +116,6 @@ In this exercise you learned about CircleCI config.yml files and how to integrat
 [2]: https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project
 [3]: https://www.gremlin.com/docs/api-reference/examples/#creating-attacks
 [4]: https://www.gremlin.com/community/tutorials/getting-started-with-gremlins-api/#step-4---use-api-examples-to-run-an-experiment
+
+## Exercise 3
+Injecting Latency
