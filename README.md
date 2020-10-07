@@ -118,4 +118,4 @@ In this exercise you learned about CircleCI config.yml files and how to integrat
 [4]: https://www.gremlin.com/community/tutorials/getting-started-with-gremlins-api/#step-4---use-api-examples-to-run-an-experiment
 
 ## Exercise 3
-Injecting Latency
+Injecting Latency blah
