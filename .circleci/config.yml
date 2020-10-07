@@ -16,20 +16,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Chaos Experiment #1 - Increase CPU 20 percent for 120 secs"
+          name: "Chaos Experiment #3 - LATENCY EXAMPLE"
           command: |
             cd chaos-experiments/
-            ./experiment1.sh ${GREMLIN_TEAM_ID} ${GREMLIN_API_KEY} ${USER_NAME}
-  chaos_exper2:
-    docker:
-      - image: ariv3ra/terraform-gcp:tf-v0.13.3
-    steps:
-      - checkout
-      - run:
-          name: "Chaos Experiment #2 - Increase CPU 60 percent for 120 secs"
-          command: |
-            cd chaos-experiments/
-            ./experiment2.sh ${GREMLIN_TEAM_ID} ${GREMLIN_API_KEY} ${USER_NAME}
+            ./experiment3.sh ${GREMLIN_TEAM_ID} ${GREMLIN_API_KEY} ${USER_NAME}
 workflows:
   deploy_chaos:
     jobs:
@@ -41,10 +31,3 @@ workflows:
       - chaos_exper1:
           requires:
             - exec_exper1
-      - exec_exper2:
-          type: approval
-          requires:
-            - chaos_exper1
-      - chaos_exper2:
-          requires:
-            - exec_exper2            
